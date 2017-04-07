@@ -4,7 +4,7 @@ The player, who lost the round, is given one more card at the next round.
 If a player had reached five cards and lost another round, he does not take one more card but no cards and plays the next round as blind
 If a blind player lose a round, the player is eliminated.
 The last player standing in game wins!
-# Round rules:
+<h2> Round rules:</h2>
 1-) First player makes a guess.
 <br/>
 2-) Second player has two choices: She/He can claim that the last guess made is false and open all cards of players or make a new guess which is higher than the last guess.
