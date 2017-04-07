@@ -17,6 +17,7 @@ The last player standing in game wins!
 <br/>
 3-) All guesses have a specific height. The guess with bigger base part is higher. If the base parts are equal, the one with secondary part is higher. If both have secondary part or both don't have a secondary part, the one with bigger value of base part is higher (heigth of values: Three<Four<Five<Six<Seven<Eight<Nine<Ten<Jack<Queen<King<Ace) If the values of both base parts are equal,  the one with bigger value of secondary part is higher.
 # Other rules:
-1-) Two's may represenent all other cards which means when the cards are counted, the two's may counted as any other card that is needed.
+1-) Two's may represenent all other cards which means when the cards are counted, the two's may counted as any other card that is needed.<br/>
 2-) Two's are forbitten to use in guesses.
+<br/>
 3-) The player who lost the last round starts on the new round. If a player is eliminated on the last round, the player who won the last round against the loser starts on the new round.
