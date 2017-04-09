@@ -24,6 +24,14 @@ public class Card {
 		return type;
 	}
 	
+	public boolean equals(Card card){
+		if(toString().equals(card.toString())){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
 	public String toString(){
 		return value + " of " + type;
 	}

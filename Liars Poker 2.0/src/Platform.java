@@ -613,7 +613,6 @@ public class Platform extends JFrame {
 		
 		setDeck();
 		setCards();
-		writeConsoleTurn();
 		aiGuess();
 		
 		setExtendedState(JFrame.MAXIMIZED_BOTH); 
@@ -691,13 +690,28 @@ public class Platform extends JFrame {
 	}
 
 	public void setDeck() {
-		deck = new Deck(players);
-		deck.initialize();
-		writeConsole(deck.shuffle());
-		writeConsole(deck.deal());
-		writeConsole("Ready to play");
-		urHand.setText(actPlayer.toString());
-		sound.shuffle();
+		Runnable run = new Runnable() {
+			
+			@Override
+			public void run() {
+				deck = new Deck(players);
+				deck.initialize();
+				writeConsole(deck.shuffle());
+				writeConsole(deck.deal());
+				writeConsole("Ready to play");
+				writeConsoleTurn();
+				urHand.setText(actPlayer.toString());
+				sound.shuffle();				
+			}
+		};
+		Thread t = new Thread(run);
+		t.start();
+		try {
+			t.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void setCards() {
@@ -718,7 +732,7 @@ public class Platform extends JFrame {
 		openCards.setEnabled(false);
 		while (actPlayer instanceof AI) {
 			if (actuall != null) {
-				Guess tmp = ((AI) actPlayer).randomGuess(actuall);
+				Guess tmp = ((AI) actPlayer).guess(actuall);
 				if (tmp != null) {
 					actuall = tmp;
 					curGuess2.setText(actuall.toString());

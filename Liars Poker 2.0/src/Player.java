@@ -3,9 +3,9 @@ public class Player {
 	private String name;
 	private boolean dealed, blind, lose, mark;
 	private int numberOfCards;
-	private Card[] Cards = new Card[2];
+	protected Card[] Cards = new Card[2];
 	private Player nextPlayer;
-	private Player prevPlayer;
+	protected Player prevPlayer;
 	public static String message="";
 	
 	public Player(String name, int numberOfCards){
@@ -82,8 +82,8 @@ public class Player {
 			}
 		}else{
 			int expectedX = guessNums[0];
-			int realX = CardsOnTable().numOfCard(types[tmp[2]]);
-			int numOf2 = CardsOnTable().numOfCard("2");
+			int realX = CardsOnTable().numOfCard(types[tmp[1]]);
+			int numOf2 = CardsOnTable().numOfCard("Two");
 			int x = 0;
 			
 			if(expectedX>realX){
@@ -208,8 +208,6 @@ public class Player {
 			}else{
 				prevPlayer.setNextPlayer(nextPlayer);
 			}
-			nextPlayer = null;
-			prevPlayer = null;
 		}else{
 //			nextPlayer.nextPlayer = null;
 //			nextPlayer.prevPlayer = null;

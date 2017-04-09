@@ -10,8 +10,8 @@ public class PlayerSettings extends JFrame {
 
 	Integer[] nums = { 3, 4, 5, 6, 7, 8, 9, 10 };
 	String[] plyrs = { "Player", "Computer" };
-	String[] ais = { "Troll" };
-	String[] possNames = { "Orhun", "Selin", "Zeynep", "Beste", "Kivanc", "Metin", "Idil", "Ilayda", "Schwarzkopf", "Terzi" };
+	String[] ais = { "Medium" };
+	String[] possNames = { "Rueger", "Rueggeberg", "Schwarzburger", "Bismark", "Feiten", "Schultz", "Tadken", "Langrock", "Schwarzkopf", "Terzi" };
 	JComboBox<Integer> numOfPlayers;
 	JLabel numberOfPlayers,music,soundEffects;
 	JButton startGame,mus,settings,home;
