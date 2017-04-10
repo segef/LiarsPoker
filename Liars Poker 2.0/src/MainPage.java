@@ -168,12 +168,7 @@ public class MainPage extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				sound.click();
-				JFrame how = new JFrame("How To Play");
-				how.setLayout(new FlowLayout());
-				how.add(new JLabel("This is how to play!"));
-				how.setSize(400, 800);
-				how.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-				how.setVisible(true);
+				HowToPlay h = new HowToPlay();
 				
 			}
 		});
@@ -353,12 +348,8 @@ public class MainPage extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				sound.click();
-				JFrame how = new JFrame("How To Play");
-				how.setLayout(new FlowLayout());
-				how.add(new JLabel("This is how to play!"));
-				how.setSize(400, 800);
-				how.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-				how.setVisible(true);
+				
+				HowToPlay htp = new HowToPlay();
 				
 			}
 		});
